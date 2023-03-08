@@ -9,7 +9,7 @@ window.addEventListener('scroll', function ()
     for (var i = 0; i < elements.length; i++)
     {
         var element = elements[i];
-        var bottom_of_element = element.offsetTop - 500 + element.offsetHeight;
+        var bottom_of_element = element.offsetTop - 100 + element.offsetHeight;
         var bottom_of_window = window.pageYOffset + window.innerHeight;
         if (bottom_of_window > bottom_of_element)
         {

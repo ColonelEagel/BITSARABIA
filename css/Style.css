@@ -508,11 +508,12 @@ form input[type="number"]:focus {
 
     .info .quotes .col .quotes-elements p {
         width: 100%;
+        text-align: center;
     }
 
     .info .quotes .col i.fa-quote-left {
-        left: -6%;
-        bottom: -7%;
+        left: 0%;
+        bottom: -18%;
     }
 
     .info .quotes .row .stars {

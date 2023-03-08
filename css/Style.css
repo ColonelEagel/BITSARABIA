@@ -1,0 +1,815 @@
+/* @import url('https://fonts.cdnfonts.com/css/eurostile-extended'); */
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap');
+
+
+/*__________________________________ Variables __________________________________*/
+:root {
+    --main-color: #EA1C24;
+    --sec-color: #000000;
+    ;
+
+    --transparent-color: rgb(15 116 143 / 70%);
+    --Font-Color: white;
+    --Font-Color2: #636466;
+    --section-padding: 100px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid; */
+}
+
+body {
+    font-family: 'Jura', sans-serif;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    background-color: transparent;
+    color: black;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*__________________________________The Start Of Media quarry __________________________________*/
+/*__________________________________Small __________________________________*/
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/*__________________________________MEdium __________________________________*/
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/*__________________________________Large  __________________________________*/
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+/*__________________________________The end Of Media quarry __________________________________*/
+/*__________________________________The Start Of header __________________________________*/
+header .logo img {
+    position: relative;
+    width: 240px;
+    height: 75px;
+    left: 57px;
+    top: 48px;
+    margin-bottom: 100px;
+}
+
+
+/*__________________________________The end Of header __________________________________*/
+/*__________________________________The Start Of landing page __________________________________*/
+.landing .head {
+    position: relative;
+    height: 764.52px;
+    background: url(../images/Rectangle\ 6.png);
+    border-radius: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing .head p.landing-p {
+    position: absolute;
+    width: 653px;
+    height: 160px;
+    left: 11%;
+    top: 8%;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 79px;
+    letter-spacing: 0.04em;
+    color: var(--Font-Color);
+}
+
+.landing .head .landingHead {
+    position: absolute;
+    height: 70%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 36.39%, rgba(121, 121, 121, 0) 93.75%);
+    border-radius: 40px;
+}
+
+.landing .head img.top-right1,
+.landing img.top-right2 {
+    position: absolute;
+    filter: drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.4));
+    border-radius: 40px;
+    z-index: 1;
+}
+
+.landing .head img.top-right1 {
+    width: 267px;
+    height: 200px;
+    right: 20%;
+    top: 4%;
+}
+
+.landing .head img.top-right2 {
+    width: 322px;
+    height: 242px;
+    right: 4%;
+    top: -14%;
+}
+
+.landing .head form {
+    position: absolute;
+    top: 71%;
+    background: #FFFFFF;
+    border: 1px solid #636466;
+    box-shadow: 0px 24px 40px rgba(0, 0, 0, 0.24);
+    border-radius: 40px;
+    height: 408px;
+}
+
+.landing .head form .container-lg {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 32px;
+    gap: 40px;
+    background: #FFFFFF;
+    border: 1px solid #636466;
+    box-shadow: 0px 24px 40px rgba(0, 0, 0, 0.24);
+    border-radius: 40px;
+}
+
+.landing .head form div.formContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    gap: 32px;
+    width: 777px;
+    height: 56px;
+}
+
+.landing .head form input {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px;
+    width: 372.5px;
+    height: 56px;
+    border: 1px solid #636466;
+    border-radius: 8px;
+}
+
+.landing .head form button.CheckAvilable {
+    background-color: var(--main-color);
+    padding: 8px 16px;
+    gap: 10px;
+    width: 400px;
+    height: 64px;
+    text-align: center;
+    outline: none;
+    border: none;
+    text-align: center;
+
+}
+
+.landing .head form .CheckAvilable a {
+    width: 228px;
+    height: 48px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 48px;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+}
+
+/*__________________________________The End Of landing page __________________________________*/
+/*__________________________________The Start Of Info __________________________________*/
+/*__________________________________The Start  Of images __________________________________*/
+.info {
+    margin-top: 400px;
+
+}
+
+.info {
+    background: #F1F1F1;
+    border-radius: 24px;
+    padding: 56px 45px;
+}
+
+.info .row .col {
+    position: relative;
+    margin-bottom: 167px;
+}
+
+.info .images .row .col .info-head-h {
+    position: absolute;
+    width: 538px;
+    height: 78px;
+
+    top: 8%;
+    padding: 24px;
+    font-family: 'Jura', sans-serif;
+    font-size: 26px;
+    text-align: center;
+    color: #FFFFFF;
+    border-radius: 40px;
+}
+
+.info .images .row .col .info-head-p {
+    width: 361px;
+    font-size: 17px;
+    line-height: 34px;
+    top: 36%;
+    /* right: 16%; */
+    position: absolute;
+}
+
+.info .images .row .col.right .info-head-p {
+    right: auto;
+}
+
+.info .images .row .col.left .info-head-p {
+    right: 0;
+}
+
+.info .images .row .col img {
+    width: 100%;
+    position: relative;
+}
+
+.info .images .row .col.right .info-head-h {
+    right: -70%;
+    background: var(--main-color);
+}
+
+.info .images .row .col.left .info-head-h {
+    right: 80%;
+    background-color: var(--sec-color);
+}
+
+@media (max-width:1200px) {
+
+    .info .images .row.info-cell {
+        flex-direction: column;
+    }
+
+    .info .images .row.info-cell .col {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .info .images .row.info-cell .info-head-h {
+        top: -9%;
+        right: auto !important;
+    }
+
+    .info .images .row .col .info-head-p {
+        width: 100%;
+        font-size: 17px;
+        right: auto;
+        top: auto;
+    }
+
+    .info .images .row .col.left .col:first-child {
+        order: 1;
+    }
+}
+
+/* @media (max-width:768px) {
+    .container {
+        width: 750px;
+    }
+} */
+
+@media (max-width:992px) {
+    .info .images .row.info-cell .info-head-h {
+        width: calc(100% - 50px);
+        font-size: 3vw;
+    }
+}
+
+
+/*__________________________________The End  Of images __________________________________*/
+/*__________________________________The Start  Of quotes __________________________________*/
+.info .quotes .quotes-head h2 {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 40px;
+    color: var(--sec-color);
+    text-align: center;
+    margin-bottom: 105px;
+}
+
+.info .quotes .col {
+    margin-left: 100px;
+    position: relative;
+}
+
+.info .quotes .row p {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 40px;
+    color: var(--Font-Color2);
+    width: 422px;
+}
+
+.info .quotes .col i.fa-quote-right {
+    position: absolute;
+    right: 1.18%;
+    top: -12%;
+    bottom: 0%;
+    color: var(--Font-Color2);
+    font-size: 50px;
+}
+
+.info .quotes .col i.fa-quote-left {
+    position: absolute;
+    left: -12%;
+    bottom: 0%;
+    font-size: 50px;
+    color: var(--Font-Color2);
+}
+
+.info .quotes .row .col.left .stars {
+    border-left: 3px solid #000000;
+    padding-left: 54px;
+}
+
+.info .quotes .row .col.right .stars {
+    border-right: 3px solid #000000;
+
+}
+
+.info .quotes .row .stars {
+    position: relative;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    width: 14vw;
+    height: 14vw;
+}
+
+.info .quotes > .row .row {
+    align-items: center;
+}
+
+.info .quotes .col i.fa-star {
+    position: relative;
+    color: var(--main-color);
+    text-align: center;
+}
+
+
+@media (max-width:1200px) {
+
+    .info .quotes .stars {
+        border: none !important;
+    }
+
+    .info .quotes .col {
+        margin-left: 0;
+    }
+
+    .info .quotes .col .quotes-elements {
+        flex-direction: column;
+    }
+
+    .info .quotes .col.right .quotes-elements .col:last-child {
+        position: absolute;
+        top: 50%;
+        width: fit-content;
+        right: 0;
+    }
+
+    .info .quotes .col.left .quotes-elements .col:first-child {
+        order: 2;
+        position: absolute;
+        top: 50%;
+        width: fit-content;
+        right: 0;
+    }
+
+    .info .quotes .col .quotes-elements p {
+        width: 100%;
+    }
+
+    .info .quotes .col i.fa-quote-left {
+        left: -6%;
+        bottom: -7%;
+    }
+
+    .info .quotes .row .stars {
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .row > * {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .landing .head form .container-lg {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        gap: 40px;
+        background: #FFFFFF;
+        border: 1px solid #636466;
+        box-shadow: 0px 24px 40px rgb(0 0 0 / 24%);
+        border-radius: 40px;
+    }
+
+}
+
+@media (max-width:768px) {
+    .info .quotes .col.right .quotes-elements .col:last-child {
+        position: absolute;
+        top: 70%;
+        right: 0;
+    }
+
+    .info .quotes .col.left .quotes-elements .col:first-child {
+        order: 2;
+        position: absolute;
+        top: 70%;
+        right: 0;
+    }
+
+    .info .quotes .row .col.left .stars {
+        background-size: cover;
+    }
+
+    .info {
+        margin-top: 600px;
+    }
+
+}
+
+/*__________________________________The End  Of quotes __________________________________*/
+/*__________________________________The Start  Of Qr __________________________________*/
+.Qr .container {
+    position: relative;
+    padding: 15px;
+}
+
+.Qr .container h1.QR-head {
+    text-align: center;
+}
+
+/*__________________________________ Start Corner section  __________________________________*/
+
+.Qr .QR-code img,
+.Qr .QR-code {
+    max-width: 71%;
+    margin: auto;
+    text-align: center;
+}
+
+
+
+
+.Qr .container span.corner {
+    position: absolute;
+    width: 5vw;
+}
+
+.Qr .container span.corner img {
+    width: 100%;
+}
+
+.Qr .container span.right {
+    right: 0%;
+}
+
+.Qr .container span.top {
+    top: -3%;
+}
+
+.Qr .container span.left {
+    left: 0;
+}
+
+.Qr .container span.bottom {
+    bottom: -3%;
+}
+
+.Qr .container span.top.right {
+    transform: rotate(187deg);
+}
+
+.Qr .container span.bottom.right {
+    transform: rotate(265deg);
+}
+
+.Qr .container span.top.left {
+
+    transform: rotate(85deg);
+}
+
+
+.Qr .container span.bottom.left {
+    transform: rotate(8deg);
+}
+
+
+
+/*__________________________________ End Corner section  __________________________________*/
+
+.Phones .phone-front {
+    position: relative;
+    width: 260px;
+    left: calc(50% - 260px/2 - 2.5px);
+    top: calc(50% - 526.08px/2 + 268px);
+}
+
+.Phones img {
+    width: 100%;
+}
+
+.Phones .phone-front .second {
+    position: absolute;
+    width: 243px;
+    left: 4%;
+    top: 5%;
+    border-radius: 7%;
+}
+
+.Phones .phone-left,
+.Phones .phone-right {
+    position: relative;
+    width: 197px;
+    top: 74px;
+    z-index: -1;
+}
+
+.Phones .phone-left .second,
+.Phones .phone-right .second {
+    position: absolute;
+    left: 8px;
+    top: 22px;
+    width: 176px;
+    border-radius: 6px;
+}
+
+.Phones .phone-right {
+    right: -28%;
+}
+
+.Phones .phone-left {
+    left: -67%;
+}
+
+
+
+
+
+
+/* media   */
+/* __________________________________Large  __________________________________*/
+/* @media (max-width:1200px) {
+    .Phones .phone-front {
+        width: 1170px;
+    }
+} */
+
+
+/*__________________________________MEdium __________________________________*/
+@media (max-width:992px) {
+    .Phones .phone-front {
+        width: 195px;
+    }
+
+    .Phones .phone-front .second {
+        width: 176px;
+        left: 5%;
+        top: 6%;
+    }
+
+    .Phones .phone-left,
+    .Phones .phone-right {
+        width: 140px;
+    }
+
+    .Phones .phone-left .second,
+    .Phones .phone-right .second {
+        left: 10px;
+        top: 22px;
+        width: 117px;
+    }
+
+    .Phones .phone-right {
+        right: -19%;
+    }
+
+    .Phones .phone-left {
+        left: -75%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .Phones .phone-front {
+        width: 79px;
+        left: 29%;
+    }
+
+    .Phones .phone-front .second {
+        width: 90%;
+        left: 6%;
+        top: 5%;
+    }
+
+    .Phones .phone-left,
+    .Phones .phone-right {
+        left: 53px;
+        top: 10px;
+        width: 70px;
+    }
+
+    .Phones .phone-left .second,
+    .Phones .phone-right .second {
+        left: 3px;
+        top: 6px;
+        width: 90%;
+    }
+
+    .Phones .phone-right {
+        right: -19%;
+    }
+
+    .Phones .phone-left {
+        left: -65%;
+    }
+
+    .Qr {
+        width: 350px;
+        margin: auto;
+    }
+
+    .landing .head img.top-right2 {
+        width: 30%;
+        height: auto;
+        right: 13%;
+        top: -9%;
+    }
+
+    .landing .head img.top-right1 {
+        width: 30%;
+        height: auto;
+        right: 28%;
+        top: -5%;
+    }
+
+    .landing .head p.landing-p {
+        position: absolute;
+        width: fit-content;
+        height: fit-content;
+        left: 13%;
+        top: 33%;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 74px;
+        letter-spacing: 0.04em;
+        color: var(--Font-Color);
+    }
+
+    .landing .head .landingHead {
+        position: absolute;
+        height: 25%;
+        width: 100%;
+    }
+
+    .info .images .row.info-cell .info-head-h {
+        width: 100%;
+        font-size: 3.9vw;
+        top: -39%;
+    }
+
+    .landing .head form input {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 16px;
+        width: 342.5px;
+        height: 56px;
+        border: 1px solid #636466;
+        border-radius: 8px;
+        margin: auto;
+    }
+
+
+}
+
+
+
+/*__________________________________The End  Of Qr __________________________________*/
+
+/*__________________________________The Start  Of footer __________________________________*/
+footer {
+    height: 283px;
+    background: #21201E;
+    margin-top: 100px;
+    position: relative;
+    margin-bottom: -5%;
+}
+
+footer .container {
+    height: 100%;
+}
+
+footer .copyRight {
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    color: #C5C0C0;
+    width: calc(100% / 3);
+}
+
+footer .logo {
+    width: calc(100% / 3);
+}
+
+footer .socialMedia {
+    color: var(--Font-Color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% / 3);
+}
+
+footer button.up {
+    position: absolute;
+    right: 47px;
+    bottom: 47px;
+}
+
+footer button.up a {
+    background: var(--main-color);
+    width: 56px;
+    height: 56px;
+    color: var(--Font-Color);
+    font-size: 40px;
+    display: inline-block;
+    text-align: center;
+}
+
+@media (max-width:1200px) {
+    footer .container {
+        flex-direction: column;
+    }
+
+    footer {
+        height: 300px;
+
+    }
+}
+
+/*__________________________________The End  Of footer __________________________________*/

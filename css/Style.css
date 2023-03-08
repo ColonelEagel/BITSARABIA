@@ -94,35 +94,35 @@ header .logo img {
 
 /*__________________________________The end Of header __________________________________*/
 /*__________________________________The Start Of landing page __________________________________*/
+.landing {
+    background-color: #f8f9fa;
+    position: relative;
+    padding-bottom: 50px;
+}
+
 .landing .head {
     position: relative;
-    height: 764.52px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
     background: url(../images/Rectangle\ 6.png);
     border-radius: 40px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    color: #fff;
 }
 
-.landing .head p.landing-p {
-    position: absolute;
-    width: 653px;
-    height: 160px;
-    left: 11%;
-    top: 8%;
-    font-style: normal;
+.landing-heading {
+    font-size: 2.5rem;
+    line-height: 4rem;
     font-weight: 700;
-    font-size: 42px;
-    line-height: 79px;
-    letter-spacing: 0.04em;
-    color: var(--Font-Color);
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+    padding: 30px;
 }
 
-.landing .head .landingHead {
+.landing .layer {
     position: absolute;
-    height: 70%;
+    height: 100%;
     width: 100%;
     left: 0;
     top: 0;
@@ -130,96 +130,170 @@ header .logo img {
     border-radius: 40px;
 }
 
-.landing .head img.top-right1,
-.landing img.top-right2 {
+.top-right1 {
     position: absolute;
-    filter: drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.4));
-    border-radius: 40px;
+    right: 0;
+    top: 0;
     z-index: 1;
 }
 
-.landing .head img.top-right1 {
-    width: 267px;
-    height: 200px;
-    right: 20%;
-    top: 4%;
-}
-
-.landing .head img.top-right2 {
-    width: 322px;
-    height: 242px;
-    right: 4%;
-    top: -14%;
+.top-right2 {
+    position: absolute;
+    right: 100px;
+    top: -80px;
+    z-index: 1;
 }
 
 .landing .head form {
     position: absolute;
-    top: 71%;
-    background: #FFFFFF;
-    border: 1px solid #636466;
-    box-shadow: 0px 24px 40px rgba(0, 0, 0, 0.24);
-    border-radius: 40px;
-    height: 408px;
+    top: 111%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%, -50%)
 }
 
-.landing .head form .container-lg {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 32px;
-    gap: 40px;
-    background: #FFFFFF;
-    border: 1px solid #636466;
-    box-shadow: 0px 24px 40px rgba(0, 0, 0, 0.24);
-    border-radius: 40px;
+.form-control {
+    border-radius: 20px;
+    border-color: #636466;
 }
 
-.landing .head form div.formContent {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0px;
-    gap: 32px;
-    width: 777px;
-    height: 56px;
+.btn-primary {
+    /* background-color: #6c757d; */
+    border-color: #6c757d;
 }
 
-.landing .head form input {
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 16px;
-    width: 372.5px;
-    height: 56px;
-    border: 1px solid #636466;
-    border-radius: 8px;
+.btn-primary:hover {
+    /* background-color: #5a6268; */
+    border-color: #545b62;
 }
 
-.landing .head form button.CheckAvilable {
-    background-color: var(--main-color);
-    padding: 8px 16px;
-    gap: 10px;
-    width: 400px;
-    height: 64px;
-    text-align: center;
-    outline: none;
+/* animation */
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.fadeInDown {
+    animation-name: fadeInDown;
+}
+
+.pulse {
+    animation-name: pulse;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.form-control {
+    border-radius: 20px;
+    border-color: #636466;
+}
+
+.btn-primary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-primary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    animation: slide-up 1s forwards;
+}
+
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) translateY(0);
+    }
+}
+
+.form-control {
+    border-radius: 20px;
+    border-color: #636466;
+}
+
+.btn-check-avail {
+    /* background-color: #dc3545;
+    border-color: #dc3545; */
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-check-avail:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+    transform: scale(1.1);
+}
+
+.btn-check-avail:focus {
+    background-color: #c82333;
+    border-color: #bd2130;
+    transform: scale(1.1);
+    box-shadow: none;
+}
+
+.btn-check-avail:active {
+    background-color: #c82333;
+    border-color: #bd2130;
+    transform: scale(0.9);
+    box-shadow: none;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="date"],
+form input[type="number"] {
     border: none;
-    text-align: center;
-
+    border-bottom: 2px solid #ccc;
 }
 
-.landing .head form .CheckAvilable a {
-    width: 228px;
-    height: 48px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 48px;
-    letter-spacing: 0.04em;
-    color: #FFFFFF;
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="date"]:focus,
+form input[type="number"]:focus {
+    border-color: #6c757d;
+    outline: none;
+    box-shadow: none;
 }
 
 /*__________________________________The End Of landing page __________________________________*/
@@ -452,7 +526,7 @@ header .logo img {
         padding: 0;
     }
 
-    .landing .head form .container-lg {
+    /* .landing .head form .container-lg {
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
@@ -464,7 +538,7 @@ header .logo img {
         border: 1px solid #636466;
         box-shadow: 0px 24px 40px rgb(0 0 0 / 24%);
         border-radius: 40px;
-    }
+    } */
 
 }
 
@@ -694,37 +768,17 @@ header .logo img {
     }
 
     .landing .head img.top-right2 {
-        width: 30%;
+        width: 42%;
         height: auto;
-        right: 13%;
-        top: -9%;
+        right: 0%;
+        top: -10%;
     }
 
     .landing .head img.top-right1 {
-        width: 30%;
+        width: 42%;
         height: auto;
-        right: 28%;
-        top: -5%;
-    }
-
-    .landing .head p.landing-p {
-        position: absolute;
-        width: fit-content;
-        height: fit-content;
-        left: 13%;
-        top: 33%;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 13px;
-        line-height: 74px;
-        letter-spacing: 0.04em;
-        color: var(--Font-Color);
-    }
-
-    .landing .head .landingHead {
-        position: absolute;
-        height: 25%;
-        width: 100%;
+        right: 18%;
+        top: 0%;
     }
 
     .info .images .row.info-cell .info-head-h {
@@ -733,16 +787,8 @@ header .logo img {
         top: -39%;
     }
 
-    .landing .head form input {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 16px;
-        width: 342.5px;
-        height: 56px;
-        border: 1px solid #636466;
-        border-radius: 8px;
-        margin: auto;
+    .landing .head form {
+        width: 100%;
     }
 
 

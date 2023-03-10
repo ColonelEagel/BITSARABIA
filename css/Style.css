@@ -1,45 +1,56 @@
-/* @import url('https://fonts.cdnfonts.com/css/eurostile-extended'); */
-@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap');
-
-
-/*__________________________________ Variables __________________________________*/
+/* Set custom variables */
 :root {
     --main-color: #EA1C24;
+    /* main color used throughout the site */
     --sec-color: #000000;
-    ;
-
+    /* secondary color used throughout the site */
     --transparent-color: rgb(15 116 143 / 70%);
+    /* semi-transparent color used for backgrounds */
     --Font-Color: white;
+    /* font color used throughout the site */
     --Font-Color2: #636466;
+    /* secondary font color used throughout the site */
     --section-padding: 100px;
+    /* default padding for sections */
 }
 
+/* Apply default styles to all elements */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* border: 1px solid; */
 }
 
+/* Apply default styles to the body element */
 body {
     font-family: 'Jura', sans-serif;
+    /* set default font for body */
     overflow-x: hidden;
+    /* hide horizontal scroll bars */
 }
 
+/* Apply default styles to the html element */
 html {
     scroll-behavior: smooth;
+    /* enable smooth scrolling on anchor links */
 }
 
+/* Apply default styles to anchor links */
 a {
     text-decoration: none;
+    /* remove underline from links */
     background-color: transparent;
+    /* set background color to transparent */
     color: black;
+    /* set font color to black */
 }
 
+/* Remove default list styles */
 ul {
     list-style: none;
 }
 
+/* Center and set padding for container element */
 .container {
     padding-left: 15px;
     padding-right: 15px;
@@ -47,41 +58,44 @@ ul {
     margin-right: auto;
 }
 
-/*__________________________________The Start Of Media quarry __________________________________*/
-/*__________________________________Small __________________________________*/
+/* Apply different container widths based on screen size */
 @media (min-width:768px) {
     .container {
         width: 750px;
     }
 }
 
-/*__________________________________MEdium __________________________________*/
 @media (min-width:992px) {
     .container {
         width: 970px;
     }
 }
 
-/*__________________________________Large  __________________________________*/
 @media (min-width:1200px) {
     .container {
         width: 1170px;
     }
 }
 
+/* Set initial styles for elements with the class 'fade-in' */
 .fade-in {
     opacity: 0;
+    /* make element invisible */
     transform: translateY(20%);
+    /* move element down by 20% of its height */
     transition: opacity 0.5s ease, transform 0.5s ease;
+    /* add transition effect */
 }
 
+/* Set styles for elements with both the classes 'fade-in' and 'visible' */
 .fade-in.visible {
     opacity: 1;
+    /* make element visible */
     transform: translateY(0%);
+    /* move element back to its original position */
 }
 
-/*__________________________________The end Of Media quarry __________________________________*/
-/*__________________________________The Start Of header __________________________________*/
+/* Set initial styles for the logo image in the header */
 header .logo img {
     position: relative;
     width: 240px;
@@ -91,24 +105,29 @@ header .logo img {
     margin-bottom: 100px;
 }
 
-
-/*__________________________________The end Of header __________________________________*/
-/*__________________________________The Start Of landing page __________________________________*/
+/* Set styles for the landing page section */
 .landing {
     background-color: #f8f9fa;
+    /* set background color for the landing section */
     position: relative;
     padding-bottom: 50px;
+    /* add padding to the bottom of the section */
 }
+
+/* The landing section */
 
 .landing .head {
     position: relative;
     padding-top: 100px;
     padding-bottom: 100px;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+    /* Set background image */
     background: url(../images/Rectangle\ 6.png);
     border-radius: 40px;
     color: #fff;
 }
+
+/* The landing section heading */
 
 .landing-heading {
     font-size: 2.5rem;
@@ -120,6 +139,8 @@ header .logo img {
     padding: 30px;
 }
 
+/* The layer on top of the landing section */
+
 .landing .layer {
     position: absolute;
     height: 100%;
@@ -129,6 +150,8 @@ header .logo img {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 36.39%, rgba(121, 121, 121, 0) 93.75%);
     border-radius: 40px;
 }
+
+/* The top right corner elements */
 
 .top-right1 {
     position: absolute;
@@ -144,6 +167,8 @@ header .logo img {
     z-index: 1;
 }
 
+/* The form in the landing section */
+
 .landing .head form {
     position: absolute;
     top: 111%;
@@ -152,22 +177,21 @@ header .logo img {
     transform: translate(-50%, -50%)
 }
 
-.form-control {
-    border-radius: 20px;
-    border-color: #636466;
-}
 
 .btn-primary {
-    /* background-color: #6c757d; */
+    /* Set button background and border color */
+    background-color: #6c757d;
     border-color: #6c757d;
 }
 
 .btn-primary:hover {
-    /* background-color: #5a6268; */
+    /* Change button background and border color on hover */
+    background-color: #5a6268;
     border-color: #545b62;
 }
 
-/* animation */
+/* The animation classes */
+
 .animated {
     animation-duration: 1s;
     animation-fill-mode: both;
@@ -180,6 +204,8 @@ header .logo img {
 .pulse {
     animation-name: pulse;
 }
+
+/* The animation keyframes */
 
 @keyframes fadeInDown {
     from {
@@ -207,20 +233,7 @@ header .logo img {
     }
 }
 
-.form-control {
-    border-radius: 20px;
-    border-color: #636466;
-}
-
-.btn-primary {
-    background-color: #6c757d;
-    border-color: #6c757d;
-}
-
-.btn-primary:hover {
-    background-color: #5a6268;
-    border-color: #545b62;
-}
+/* The form styles */
 
 form {
     position: absolute;
@@ -247,24 +260,26 @@ form {
     }
 }
 
+/* Styles for form inputs */
 .form-control {
     border-radius: 20px;
     border-color: #636466;
 }
 
+/* Styles for the 'check availability' button */
 .btn-check-avail {
-    /* background-color: #dc3545;
-    border-color: #dc3545; */
     border-radius: 20px;
     transition: all 0.3s ease-in-out;
 }
 
+/* Hover effect for the 'check availability' button */
 .btn-check-avail:hover {
     background-color: #c82333;
     border-color: #bd2130;
     transform: scale(1.1);
 }
 
+/* Focus effect for the 'check availability' button */
 .btn-check-avail:focus {
     background-color: #c82333;
     border-color: #bd2130;
@@ -272,6 +287,7 @@ form {
     box-shadow: none;
 }
 
+/* Active effect for the 'check availability' button */
 .btn-check-avail:active {
     background-color: #c82333;
     border-color: #bd2130;
@@ -279,6 +295,7 @@ form {
     box-shadow: none;
 }
 
+/* Styles for form inputs of type text, email, date, and number */
 form input[type="text"],
 form input[type="email"],
 form input[type="date"],
@@ -287,6 +304,7 @@ form input[type="number"] {
     border-bottom: 2px solid #ccc;
 }
 
+/* Focus effect for form inputs of type text, email, date, and number */
 form input[type="text"]:focus,
 form input[type="email"]:focus,
 form input[type="date"]:focus,
@@ -296,7 +314,8 @@ form input[type="number"]:focus {
     box-shadow: none;
 }
 
-/*__________________________________The End Of landing page __________________________________*/
+/* End of landing page styles */
+/* (This section is not necessary if this is the only file) */
 /*__________________________________The Start Of Info __________________________________*/
 /*__________________________________The Start  Of images __________________________________*/
 .info {
@@ -338,25 +357,25 @@ form input[type="number"]:focus {
     position: absolute;
 }
 
-.info .images .row .col.right .info-head-p {
+.info .images .row .right .info-head-p {
     right: auto;
 }
 
-.info .images .row .col.left .info-head-p {
+.info .images .row .left .info-head-p {
     right: 0;
 }
 
-.info .images .row .col img {
+.info .images .row  img {
     width: 100%;
     position: relative;
 }
 
-.info .images .row .col.right .info-head-h {
+.info .images .row .right .info-head-h {
     right: -70%;
     background: var(--main-color);
 }
 
-.info .images .row .col.left .info-head-h {
+.info .images .row .left .info-head-h {
     right: 80%;
     background-color: var(--sec-color);
 }
@@ -450,7 +469,7 @@ form input[type="number"]:focus {
     padding-left: 54px;
 }
 
-.info .quotes .row .col.right .stars {
+.info .quotes .row .right .stars {
     border-right: 3px solid #000000;
 
 }
@@ -491,7 +510,7 @@ form input[type="number"]:focus {
         flex-direction: column;
     }
 
-    .info .quotes .col.right .quotes-elements .col:last-child {
+    .info .quotes .right .quotes-elements .col:last-child {
         position: absolute;
         top: 50%;
         width: fit-content;
@@ -544,7 +563,7 @@ form input[type="number"]:focus {
 }
 
 @media (max-width:768px) {
-    .info .quotes .col.right .quotes-elements .col:last-child {
+    .info .quotes .right .quotes-elements .col:last-child {
         position: absolute;
         top: 70%;
         right: 0;

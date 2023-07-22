@@ -10,9 +10,50 @@
     <!-- Linking to Font Awesome Library -->
     <link rel="stylesheet" href="css/all.min.css">
 
-    <!-- Linking to Bootstrap CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Local fallback for Bootstrap CSS -->
+    <script>
+        const bootstrapCDN = "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css";
+        const localBootstrap = "script/bootstrap.min.css";
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = bootstrapCDN;
+        const bootstrapLoaded = false;
+  
+        link.onload = function() {
+          bootstrapLoaded = true;
+        };
+  
+        link.onerror = function() {
+          // If CDN fails to load, switch to local fallback
+          link.href = localBootstrap;
+          bootstrapLoaded = true;
+        };
+  
+        document.head.appendChild(link);
+      </script>
+   <script>
+    const jqueryCDN = "https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js";
+    const localJquery = "script/jquery.js";
+    const script = document.createElement("script");
+    script.src = jqueryCDN;
+    const jqueryLoaded = false;
+
+    script.onload = function() {
+        jqueryLoaded = true;
+    };
+
+    script.onerror = function() {
+        // If CDN fails to load, switch to local fallback
+        script.src = localJquery;
+        jqueryLoaded = true;
+    };
+
+    document.head.appendChild(script);
+</script>
+
+      <!-- Linking to main CSS file -->
+      <link rel="stylesheet" href="css/Style.css">
     <!-- Linking to main CSS file -->
     <link rel="stylesheet" href="css/Style.css">
 
@@ -385,20 +426,6 @@
     </footer>
     </div>
     <!--__________________________________ Bootstrap cdn  __________________________________-->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <!-- jQuery local fallback -->
-    <script>window.jQuery || document.write('<script src="/script/jquery.min.js"><\/script>')</script>
-    <!-- Bootstrap JS CDN -->
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-    <!-- Bootstrap JS local fallback -->
-    <script>if(typeof($.fn.modal) === 'undefined') {document.write('<script src="/script/bootstrap.min.js"><\/script>')}</script>
-    <!-- Bootstrap CSS local fallback -->
-    <script>
-      $(document).ready(function() {
-      var bodyColor = $('body').css('color');
-      if(bodyColor != 'rgb(51, 51, 51)') {
-      $("head").prepend('<link rel="stylesheet" href="/script/bootstrap.min.css">');}});
-    </script>
     <script src="new.js"></script>
 </body>
 
